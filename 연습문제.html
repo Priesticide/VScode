@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<fieldset>
+		<legend>문제 5</legend>
+		<h3>1~20사이의 랜덤한 숫자를 생성해서 input 태그 안에 입력해주세요.</h3>
+		랜덤:<input type="text" readonly="readonly" id="randomInput"/> <button onclick="answer05();">생성</button>
+	</fieldset>
+<script>
+	function answer05(){
+
+		var randomInput = document.getElementById('randomInput').value;
+
+		randomInput = Math.random(20) +1; 
+
+		
+		console.log(randomInput);
+
+	}
+</script>
+</body>
+</html> 
