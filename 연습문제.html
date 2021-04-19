@@ -2,21 +2,26 @@
 <html>
 <body>
 	<fieldset>
-		<legend>문제 5</legend>
-		<h3>1~20사이의 랜덤한 숫자를 생성해서 input 태그 안에 입력해주세요.</h3>
-		랜덤:<input type="text" readonly="readonly" id="randomInput"/> <button onclick="answer05();">생성</button>
+		<legend>문제 8</legend>
+		<h3>개강일부터 오늘까지의 날짜를 alert으로 출력해 주세요. (getTime() 메서드 사용)</h3>
+		개강일 : <input type="date" id="startDate"/> <button onclick="answer08();">날짜</button>
 	</fieldset>
 <script>
-	function answer05(){
+	function answer08(){
 
-		var randomInput = document.getElementById('randomInput').value;
+		var date2
+		var date = document.getElementById('startDate').value;
+		console.log(date);
 
-		randomInput = Math.random(20) +1; 
+		// 자바스크립트 31에 내용이있음 new Date()에 값을 넣는 방식
+		var startedTime = new Date(0,1,2);
+		var startday = date.getTime(); 
 
-		
-		console.log(randomInput);
+		var dday = startedTime.getTime();
+
+		alert('');
 
 	}
 </script>
 </body>
-</html> 
+</html>
