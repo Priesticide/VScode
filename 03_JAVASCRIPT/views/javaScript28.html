@@ -36,56 +36,56 @@
 	<script>
         var member;
 
-		// function Member(name, age, address){
+		function Member(name, age, address){
 
-		// 	this.name = name;
-		// 	this.age = age;
-		// 	this.address = address;
+			this.name = name;
+			this.age = age;
+			this.address = address;
 
-		// 	this.toString = function(){
+			this.toString = function(){
 
-		// 		return "이름 : " + name + "<br> 나이 : " + age + "세 <br> 주소 : " + address;
-
-		// 	}
-		// }
-        
-		// var print = document.getElementById("print");
-        // function insertMember(){
-		// 	member = new Member(prompt("이름를 입력하세요."), parseInt(prompt("나이를 입력하세요.")),prompt('주소를 입력하세요.'));
-            
-        // }
-        
-        // function printMember(){
-
-		// 	print.innerHTML = member.toString();
-
-            
-        // }
-		
-		function insertMember(){
-			var name = prompt('이름을 입력하세요.');
-			var age = prompt('나이를 입력하세요.');
-			var address = prompt('주소를 입력하세요.');
-			
-			member = {
-				name : name,
-				age : age,
-				address : address
-			};
-		}
-		
-		function printMember(){
-			var print = document.getElementById('print');
-
-			console.log(member);
-
-			for(var key in member){
-
-				print.innerHTML += member[key];
-
+				return "이름 : " + name + "\n 나이 : " + age + "세 \n 주소 : " + address;
 
 			}
 		}
+        
+		var print = document.getElementById("print");
+        function insertMember(){
+			member = new Member(prompt("이름를 입력하세요."), parseInt(prompt("나이를 입력하세요.")),prompt('주소를 입력하세요.'));
+            
+        }
+        
+        function printMember(){
+
+			print.innerHTML = member.toString();
+
+            
+        }
+		
+		// function insertMember(){
+		// 	var name = prompt('이름을 입력하세요.');
+		// 	var age = prompt('나이를 입력하세요.');
+		// 	var address = prompt('주소를 입력하세요.');
+			
+		// 	member = {
+		// 		name : name,
+		// 		age : age,
+		// 		address : address
+		// 	};
+		// }
+		
+		// function printMember(){
+		// 	var print = document.getElementById('print');
+
+		// 	console.log(member);
+
+		// 	for(var key in member){
+
+		// 		print.innerHTML += member[key];
+
+
+		// 	}
+		// }
 
     </script>
 	

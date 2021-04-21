@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>입력 양식 필터 선택자</h1>
+    <h3>checkbox의 상태에 대한 선택자</h3>
+    <label for="">취미 : </label>
+    <input type="checkbox" name="hobby" id="game" value="game">
+    <label for="">게임</label>
+    <input type="checkbox" name="hobby" id="movie" value="movie">
+    <label for="">영화</label>
+    <input type="checkbox" name="hobby" id="music" value="music">
+    <label for="">음악</label>p
+    <script>
+        $("input:checkbox").change(chepckChange);
+
+        function checkChange(){
+
+            // 셀렉트 관련 바뀌는 이벤트는 attr 이 아닌 prop로 변경해주면 된다.
+            console.log($(this).prop("checked"));
+
+            if($(this).prop("checked")){
+                
+                $(this).css({"width" : "100px", "height" : "100px"});
+
+            } else {
+                
+                $(this).css({"width" : "15px", "height" : "15px"});
+            }
+        }
+    </script>
+</body>
+</html>-09iol

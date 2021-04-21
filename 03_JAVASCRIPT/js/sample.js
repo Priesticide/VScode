@@ -65,3 +65,74 @@ function answer02(){
 			}
 		}
 	}
+
+    function answer05(){
+
+		var randomInput = document.getElementById('randomInput');
+
+		randomNumber = Math.floor((Math.random() *20) +1); 
+
+		console.log(randomNumber);
+
+		randomInput.placeholder= randomNumber;
+
+	}
+
+    function answer06(){
+		var locationSelect = document.getElementById('locationSelect');
+
+		if(locationSelect[1].selected == true){
+
+			window.location.href = "http://www.naver.com";
+
+		} else if(locationSelect[2].selected == true){
+
+			window.location.href = "http://www.google.com";
+
+		} else if(locationSelect[3].selected == true){
+
+			window.location.href = "http://www.w3schools.com";
+
+		}
+	}
+
+	function answer07(){
+		var numVal = document.getElementById('numVal').innerText;
+	
+		var arr = numVal.split(',');
+	
+	
+		// console.log(sorted);
+			
+		var sortedArr = arr.sort(function(left, right){
+								  return left - right;
+								 });
+	
+		alert(sortedArr);
+	
+	
+	}
+
+	function answer08(){
+
+		var date2
+		var date = document.getElementById('startDate').valueAsDate;
+		console.log(date);
+
+		// 자바스크립트 31에 내용이있음 new Date()에 값을 넣는 방식
+
+		var currnTime = new Date();
+		var startday = date.getTime(); 
+
+		console.log(startday);
+
+		var dday = currnTime.getTime();
+
+		var day = Math.floor((dday - startday) / (1000 * 60 * 60* 24));
+
+
+		
+
+		alert(day + "일 이 지났습니다.");
+
+	}
