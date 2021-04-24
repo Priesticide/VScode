@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .first{color: red;}
+        .second{color: pink;}
+        .third{color: orange;}
+    </style>
+</head>
+<body>
+    <h3>attr() 메서드</h3>
+    <p>문서객체의 특정 속성값을 알아내거나 속성을 추가할때 사용</p>
+    <img src="../image/flower1.PNG" width="400px height=300px">
+    <script>
+        $(function(){
+
+            // 속성명에 해당하는 속성값을 리턴
+            var img = $("img").attr("src");
+            console.log("사진 경로 : " + img);
+
+            // 속성명에 해당하는 속성 값을 변경
+            $("img").attr("src","../image/flower2.png");
+
+            $("img").attr("src",function(index,value){
+                console.log(index, value);
+            });
+
+            // 객체를 통해 여러 속성을 설정
+            $("img").attr({"width":"100px","height":"100px"});
+            
+            // 객체의 속성을 제거
+            // $("img").removeAttr("width");
+        });
+    </script>
+
+    <hr>
+
+    <h3>CSS() 메소드</h3>
+    <p>문서 객체의 스타일을 검사하거나 변결할 때 사용한다.</p>
+    <h1 class="first">test-0</h1>
+    <h1 class="second">test-1</h1>
+    <h1 class="third">test-2</h1>
+    <script>
+        $(function(){
+            // 속성명에 해당하는 속성 값을 리턴
+            console.log($(".first").css("color"));
+
+            // 속성명에 해당하는 속성 값을 변경
+            $(".first").css("color","black");
+
+            $(".first").css("color",function(index, value){
+
+                console.log(indwx, value);
+            });
+        });
+    </script>
+</body>
+</html>
